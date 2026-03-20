@@ -50,3 +50,15 @@ public class App {
         sc.close();
     }
 }
+
+//          OUTPUT
+// Enter how many numbers: 6
+// Enter the numbers: 
+// 10
+// 3
+// 29
+// 46
+// 3
+// 4
+// Second minimum: 4 
+// Second maximum: 29

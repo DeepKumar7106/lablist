@@ -89,3 +89,8 @@ public class App {
         sc.close();
     }
 }
+
+
+//                 output
+// Enter a number between 0  and 99,999: 23789
+// 23789:TWENTY THREE THOUSAND SEVEN HUNDRED EIGHTY NINE

@@ -72,3 +72,8 @@ public class App {
         sc.close();
     }
 }
+
+//              OUTPUT
+// Enter a string: Good Morning everyone
+// Transformed String: oGdo  vereoyen
+// Toggled: gOOD mORNING EVERYONE  

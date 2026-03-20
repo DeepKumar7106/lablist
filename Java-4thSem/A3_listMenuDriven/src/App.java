@@ -22,7 +22,7 @@ public class App {
         boolean loop = true;
         while (loop) {
             //Long-ahh print statement printing all menu options
-            System.out.print("\n\n----MENU DIRVEN----\n-1) Adding elements \r\n-2) Sorting elements  \r\n-3) Replace an element with another  \r\n-4) Removing an element \r\n-5) Displaying all the elements  \r\n-6) Adding an element between two elements\nEnter the choice: ");
+            System.out.print("\n\n----MENU DIRVEN----\n-1) Adding elements \r\n-2) Sorting elements  \r\n-3) Replace an element with another  \r\n-4) Removing an element \r\n-5) Displaying all the elements  \r\n-6) Adding an element between two elements\n -7) Exit\n\nEnter the choice: ");
 
             // SWITCH-CASE: An efficient way to handle multiple conditional branches 
             // based on the value of a single variable (choice)
@@ -93,6 +93,7 @@ public class App {
                     // Setting the flag to false to break the while loop.
                     System.out.println("Exiting......     ");
                     loop = false;
+                    break;
                 default:
                     System.out.println("Invalid choice... ");
                     break;
@@ -101,3 +102,72 @@ public class App {
         sc.close();
     }
 }
+
+//          OUTPUT
+
+// ----MENU DIRVEN----
+// -1) Adding elements 
+// -2) Sorting elements
+// -3) Replace an element with another
+// -4) Removing an element
+// -5) Displaying all the elements
+// -6) Adding an element between two elements
+// -7) Exit
+// Enter the choice: 1
+// Enter the element to be added: 10
+
+
+// Enter the choice: 1
+// Enter the element to be added: 20
+
+
+// Enter the choice: 1
+// Enter the element to be added: 40
+
+
+// Enter the choice: 5
+// Array elements: [10, 20, 40]
+
+
+// Enter the choice: 6
+// Enter the value to add: 2
+// Enter the position of the element: 3
+// Invalid Index..  
+
+
+// Enter the choice: 5
+// Array elements: [10, 20, 40]
+
+
+// Enter the choice: 6
+// Enter the value to add: 50
+// Enter the position of the element: 2
+// Value added
+
+
+// Enter the choice: 5
+// Array elements: [10, 20, 50, 40]
+
+
+// Enter the choice: 3
+// Enter the index of the value to be replaced: 1
+// Enter the value to be replaced: 30
+// Value Replaced
+
+
+// Enter the choice: 4
+// Enter the value to remove: 
+// 40
+// 40 removed!
+
+
+// Enter the choice: 2
+// Sorted!!...
+
+
+// Enter the choice: 5
+// Array elements: [10, 30, 50]
+
+
+// Enter the choice: 7
+// Exiting...... 
