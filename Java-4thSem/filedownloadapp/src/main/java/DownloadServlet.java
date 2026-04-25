@@ -19,7 +19,7 @@ public class DownloadServlet extends HttpServlet {
         OutputStream os = response.getOutputStream();
         java.io.FileInputStream in = new java.io.FileInputStream(filePath);
         int bytesRead;
-        byte[] buffer = new byte[1024]; 
+        byte[] buffer = new byte[8234]; 
         while ((bytesRead = in.read(buffer)) != -1) {
             os.write(buffer, 0, bytesRead);
         }
