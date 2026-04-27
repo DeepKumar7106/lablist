@@ -94,3 +94,87 @@ public class App {
 //                 output
 // Enter a number between 0  and 99,999: 23789
 // 23789:TWENTY THREE THOUSAND SEVEN HUNDRED EIGHTY NINE
+
+
+// import java.rmi.registry.LocateRegistry;
+// import java.rmi.registry.Registry;
+
+// public class TaxServer {
+//     public static void main(String[] args) {
+//         try {
+//             TaxImpl taxService = new TaxImpl();
+//             Registry registry = LocateRegistry.createRegistry(18888);
+//             registry.rebind("TaxService", taxService);
+//             System.out.println("Tax Server is running...");
+//         } catch (Exception e) {
+//         }
+//     }
+// }
+
+// ******************************************************************
+
+// import java.rmi.server.UnicastRemoteObject;
+// import java.rmi.RemoteException;
+
+// public class TaxImpl extends UnicastRemoteObject implements Tax {
+
+//     public TaxImpl() throws RemoteException {
+//         super();
+//     }
+
+//     @Override
+//     public double calculateTax(double income) throws RemoteException {
+//         double tax = 0;
+
+//         if (income <= 300000) {
+//             tax = 0;
+//         } else if (income <= 600000) {
+//             tax = (income - 300000) * 0.05;
+//         } else if (income <= 900000) {
+//             tax = (300000 * 0.05) + (income - 600000) * 0.10;
+//         } else if (income <= 1200000) {
+//             tax = (300000 * 0.05) + (300000 * 0.10) + (income - 900000) * 0.15;
+//         } else if (income <= 1500000) {
+//             tax = (300000 * 0.05) + (300000 * 0.10) + (300000 * 0.15) + (income - 1200000) * 0.20;
+//         } else {
+//             tax = (300000 * 0.05) + (300000 * 0.10) + (300000 * 0.15) + (300000 * 0.20) + (income - 1500000) * 0.30;
+//         }
+
+//         return tax;
+//     }
+// }
+
+// ***************************************************************
+
+// import java.rmi.registry.LocateRegistry;
+// import java.rmi.RemoteException;
+// import java.rmi.NotBoundException;
+// import java.rmi.registry.Registry;
+// import java.util.Scanner;
+
+// public class TaxClient {
+//     public static void main(String[] args)throws RemoteException, NotBoundException {
+//         try {
+//             Registry registry = LocateRegistry.getRegistry("localhost", 18888);
+//             Tax taxService = (Tax) registry.lookup("TaxService");
+
+//             Scanner scanner = new Scanner(System.in);
+//             System.out.print("Enter your annual income: ");
+//             double income = scanner.nextDouble();
+//             scanner.close();
+
+//             double tax = taxService.calculateTax(income);
+//             System.out.println("Your calculated income tax is: " + tax);
+//         } catch (Exception e) {
+//         }
+//     }
+// }
+
+// ********************************************************************
+
+// import java.rmi.*;
+
+// public interface Tax extends Remote {
+//     double calculateTax(double income) throws RemoteException;
+// }
+
